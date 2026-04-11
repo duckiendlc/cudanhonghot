@@ -4,3 +4,9 @@ node_modules/
 .vscode/
 .idea/
 *.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+cap/

@@ -1,0 +1,9 @@
+{
+  "title": "Hướng dẫn sử dụng Cư Dân Hóng Hớt",
+  "date": "2026-04-10",
+  "description": "Cách đăng bài viết mới lên Cư Dân Hóng Hớt qua bot tự động",
+  "thumbnail": "https://picsum.photos/800/400?random=2",
+  "categories": ["Hướng dẫn"],
+  "tags": ["guide"],
+  "content_html": "<p>Để thêm bài viết mới, bot tự động gọi GitHub API đưa file JSON vào thư mục <code>posts/</code>.</p><h2>Schema bài viết</h2><p>Xem API_CONTRACT.md trong repo.</p><p>Rất đơn giản!</p>"
+}

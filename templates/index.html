@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<section id="home">
+  <div class="home-inner">
+    <img src="/logo.svg" alt="{{ site.name }}" class="logo-img">
+    <ul class="post-list">
+      {% for p in posts %}
+      <li>
+        <a href="{{ p.url }}">
+          {{ p.title }}
+          <span class="date">{{ p.date }}</span>
+        </a>
+      </li>
+      {% else %}
+      <li style="text-align:center;color:#999;padding:40px 0">Chưa có bài viết nào</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

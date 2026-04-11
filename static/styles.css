@@ -93,6 +93,13 @@ html, body {
   border-radius: 8px;
 }
 .post-content iframe { width: 100%; aspect-ratio: 16/9; }
+.post-content > video { width: 100%; aspect-ratio: 16/9; background: #000; }
+.post-thumb { max-width: 100%; border-radius: 8px; margin: 20px auto; display: block; }
+.post-body { margin-top: 20px; }
+.tags { margin-top: 32px; }
+.tag { display: inline-block; padding: 4px 10px; margin: 2px; background: #eef2ff; color: var(--accent); border-radius: 12px; font-size: 13px; }
+.source { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); word-break: break-all; }
+.source a { color: var(--accent); }
 
 /* BANNER OVERLAY */
 .banner-overlay {

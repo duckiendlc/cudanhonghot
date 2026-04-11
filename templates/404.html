@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}404 - {{ site.name }}{% endblock %}
+{% block body %}
+<section id="home">
+  <div class="home-inner">
+    <img src="/logo.svg" alt="{{ site.name }}" class="logo-img">
+    <h2 style="margin-bottom:16px">404 - Không tìm thấy bài viết</h2>
+    <a href="/" class="back">← Về trang chủ</a>
+  </div>
+</section>
+{% endblock %}

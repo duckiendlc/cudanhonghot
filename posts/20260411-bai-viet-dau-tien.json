@@ -1,0 +1,10 @@
+{
+  "title": "Bài viết đầu tiên",
+  "date": "2026-04-11",
+  "description": "Bài viết demo đầu tiên trên Cư Dân Hóng Hớt - test chèn ảnh và video",
+  "thumbnail": "https://picsum.photos/800/450",
+  "video_url": "https://cdn.videy.co/e6vInmF01.mp4",
+  "categories": ["Demo"],
+  "tags": ["demo", "test"],
+  "content_html": "<p>Đây là đoạn mở đầu của bài viết. Bạn có thể viết nội dung tự do bằng HTML.</p><h2>Chèn hình ảnh</h2><p>Ảnh minh họa:</p><img src=\"https://picsum.photos/800/450?random=5\" alt=\"Ảnh minh họa\" /><h2>Chèn video YouTube</h2><iframe src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\" allowfullscreen></iframe><p>Kết thúc bài viết. Cảm ơn bạn đã đọc!</p>"
+}
