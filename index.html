@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cư Dân Hóng Hớt - Drama, Tin Nóng, Video</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HOME VIEW -->
+  <section id="home" class="view">
+    <div class="home-inner">
+      <img src="logo.svg" alt="Cư Dân Hóng Hớt" class="logo-img" />
+      <ul id="post-list" class="post-list"></ul>
+    </div>
+  </section>
+
+  <!-- POST VIEW -->
+  <section id="post" class="view hidden">
+    <header class="post-header">
+      <a href="#/" class="back">← Trang chủ</a>
+      <img src="logo.svg" alt="Cư Dân Hóng Hớt" class="logo-img small" />
+    </header>
+    <article id="post-content" class="post-content"></article>
+  </section>
+
+  <!-- AFFILIATE BANNER OVERLAY -->
+  <div id="banner-overlay" class="banner-overlay hidden">
+    <div class="banner-box">
+      <button id="banner-close" class="banner-close" aria-label="Đóng">×</button>
+      <a id="banner-link" href="#" target="_blank" rel="noopener">
+        <img id="banner-image" src="" alt="Quảng cáo" />
+      </a>
+      <div class="banner-hint">Bấm <b>×</b> hoặc vào banner để tiếp tục đọc bài</div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="posts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
