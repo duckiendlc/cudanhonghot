@@ -4,7 +4,7 @@
   <div class="home-inner">
     <img src="/logo.svg" alt="{{ site.name }}" class="logo-img">
     <ul class="post-list">
-      {% for p in posts %}
+      {% for p in posts[:2] %}
       <li>
         <a href="{{ p.url }}">
           {{ p.title }}
