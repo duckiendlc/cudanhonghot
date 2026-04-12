@@ -181,3 +181,74 @@ posts/*.json → build.py (Python + Jinja2) → dist/ → GitHub Pages
 - Khi sua `config.py` → anh huong ca web (site name, affiliate) nen can trigger rebuild
 - `bot_client.py` o root duoc dung boi ca `bot/publisher.py` (import tu parent dir) — KHONG move/rename
 - Moi thay doi push len `main` branch se tu dong trigger build + deploy
+
+---
+
+## Quy trinh lam viec 2 may
+
+### Phan chia trach nhiem
+
+| May WEB (Windows) | May Bot (Linux ARM64) |
+|---|---|
+| Sua web: templates, CSS, build.py | Sua bot: `bot/` folder |
+| Config site: config.py | Config bot: bot/.env |
+| Tao/sua shortlink: `s/` | Crawl, rewrite, publish bai |
+| Review trang web | Post Facebook + comment |
+
+### Quy tac chung
+
+1. **Luon `git pull` truoc khi lam viec** — tranh conflict
+2. **Khong sua file cua nhau:**
+   - May WEB: khong sua `bot/`
+   - May Bot: khong sua `templates/`, `static/`, `build.py`, `config.py`
+3. **File dung chung (chi doc, khong sua):**
+   - `bot_client.py` — ca 2 dung nhung chi may WEB sua
+   - `SYSTEM_GUIDE.md`, `API_CONTRACT.md` — tai lieu chung
+4. **Commit message ro rang** de ben kia doc git log hieu ngay:
+   - May WEB: `web: ...` hoac `fix: ...`
+   - May Bot: `bot: ...`
+
+### Flow hang ngay
+
+```
+May WEB                          May Bot
+  |                                |
+  |  git pull                      |  git pull
+  |  sua web (templates/CSS)       |  sua bot code
+  |  git push                      |  git push
+  |                                |
+  |  <-- git pull lay code bot --> |  <-- git pull lay code web -->
+  |                                |
+  |  check web live ok?            |  chay python main.py
+  |                                |  → crawl → rewrite → publish
+  |                                |  → GitHub Actions build web
+  |  thay bai moi tren web         |  → post FB + comment shortlink
+```
+
+### Khi co conflict
+
+```
+git pull origin main
+# Neu conflict:
+# 1. Xem file nao conflict
+# 2. Neu file trong pham vi cua minh → fix
+# 3. Neu file cua ben kia → lien he, khong tu y sua
+git add .
+git commit -m "merge: resolve conflict"
+git push origin main
+```
+
+### Giao tiep qua repo
+
+Dung file `NOTES.md` o root de ghi chu cho nhau:
+
+```markdown
+# Notes
+## 2026-04-12 - WEB
+- Da bat HTTPS
+- Home hien 2 bai moi nhat
+
+## 2026-04-12 - BOT
+- Da clone repo thanh cong
+- Dang test pipeline
+```
