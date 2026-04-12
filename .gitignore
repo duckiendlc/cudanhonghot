@@ -10,3 +10,8 @@ __pycache__/
 venv/
 dist/
 cap/
+
+# Bot secrets - NEVER commit
+bot/.env
+bot/credentials.json
+bot/logs/
