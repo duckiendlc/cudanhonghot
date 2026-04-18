@@ -10,10 +10,13 @@ Trong giai doan hien tai:
 - `projects/content-automation/` tren may bot van la noi chay production thu nghiem nhanh
 - `projects/cudanhonghot/bot/` la repo goc can duoc cap nhat dan de tro thanh source of truth cho bot shared
 
-Neu ban dang lam viec tu may khac, hay doc them:
+Neu ban dang lam viec tu may khac, hay doc theo thu tu nay:
 - `../SYSTEM_GUIDE.md`
 - `../API_CONTRACT.md`
 - `MIGRATION_PLAN.md`
+- `COLLAB_WORKFLOW.md`
+- `STATUS_BOARD.md`
+- `HANDOFF.md`
 
 ## Setup
 
