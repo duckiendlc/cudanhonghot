@@ -2,6 +2,19 @@
 
 Tu dong crawl tin tuc, rewrite, publish len web va dang Facebook.
 
+## Working mode hien tai
+
+Repo `cudanhonghot/bot` la noi can tro thanh bot production shared de nhieu may cung pull/push lam viec chung.
+
+Trong giai doan hien tai:
+- `projects/content-automation/` tren may bot van la noi chay production thu nghiem nhanh
+- `projects/cudanhonghot/bot/` la repo goc can duoc cap nhat dan de tro thanh source of truth cho bot shared
+
+Neu ban dang lam viec tu may khac, hay doc them:
+- `../SYSTEM_GUIDE.md`
+- `../API_CONTRACT.md`
+- `MIGRATION_PLAN.md`
+
 ## Setup
 
 ```bash
