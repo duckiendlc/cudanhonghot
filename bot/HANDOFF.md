@@ -18,18 +18,27 @@
 - `bot/config/content-agent.json`
 - `bot/scripts/rewrite_via_openai.py`
 - `bot/docs/PRODUCTION_ENTRYPOINTS.md`
+- `bot/scripts/run_morning_chain.py`
+- `bot/scripts/run_publish_queue_once.py`
+- `bot/scripts/run_healthcheck.py`
+- `bot/scripts/source_registry.py`
+- `bot/scripts/scan_multi_source_targets.py`
+- `bot/scripts/source_scan_generic_rss_to_sheet.py`
+- `bot/scripts/crawl_jobs_by_source_router.py`
+- `bot/scripts/crawl_generic_article_jobs.py`
+- `bot/scripts/create_internal_shortlink.py`
+- `bot/docs/SCHEDULE_AND_RUNTIME.md`
 
 ### Chua xong
-- Chua port logic scheduler production tu `projects/content-automation/` vao `bot/`.
-- Chua port multi-source engine vao `bot/`.
-- Chua sua bug shortlink path `s/s/...`.
+- Chua port het dependency scripts scheduler production vao `bot/`.
 - Chua noi runner rewrite moi vao pipeline bot repo hien tai.
+- Chua test end-to-end full scheduler truc tiep tu repo bot.
 
 ### Uu tien tiep theo
-1. Port scheduler production (`run_morning_chain`, `run_publish_queue_once`, healthcheck) vao `bot/`.
-2. Port multi-source registry/router/scanner/crawler vao `bot/`.
-3. Noi rewrite runner moi vao pipeline bot repo.
-4. Sau moi cum port, test chay that tu repo `bot/`.
+1. Port cac dependency con thieu cho scheduler (`load_*`, `seed_*`, `merge_*`, `select_*`, `report_*`, source-specific handlers).
+2. Noi rewrite runner moi vao pipeline bot repo.
+3. Test end-to-end full scheduler truc tiep tu repo `bot/`.
+4. Sau khi on dinh, dua cron/wrapper production bam thang repo `bot/`.
 
 ### Ghi chu cho may khac
 - Neu muon nam tien do nhanh, doc theo thu tu:

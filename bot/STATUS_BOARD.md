@@ -9,10 +9,10 @@ Cap nhat trang thai bot production de ca 2 may cung nam duoc tien do.
 - Lap ke hoach migrate logic production tu workspace `projects/content-automation/` vao `bot/`
 
 ### Ready next
-- Port cum scheduler production vao `bot/`
-- Port source registry + multi-source crawl router vao `bot/`
-- Chot file entrypoint production cho bot repo
-- Noi runner rewrite moi vao pipeline bot repo
+- Port cac dependency con thieu cho `run_morning_chain.py` vao `bot/scripts/`
+- Noi scheduler moi vao pipeline bot repo hien tai
+- Port source-specific crawlers/rewrite/report helpers con thieu
+- Test chay production truc tiep tu repo `bot/`
 
 ## DONE
 
@@ -26,6 +26,17 @@ Cap nhat trang thai bot production de ca 2 may cung nam duoc tien do.
   - `bot/config/content-agent.json`
   - `bot/scripts/rewrite_via_openai.py`
   - `bot/docs/PRODUCTION_ENTRYPOINTS.md`
+- Da port them cum scheduler / multi-source / healthcheck / shortlink dau tien vao repo bot:
+  - `bot/scripts/run_morning_chain.py`
+  - `bot/scripts/run_publish_queue_once.py`
+  - `bot/scripts/run_healthcheck.py`
+  - `bot/scripts/source_registry.py`
+  - `bot/scripts/scan_multi_source_targets.py`
+  - `bot/scripts/source_scan_generic_rss_to_sheet.py`
+  - `bot/scripts/crawl_jobs_by_source_router.py`
+  - `bot/scripts/crawl_generic_article_jobs.py`
+  - `bot/scripts/create_internal_shortlink.py`
+  - `bot/docs/SCHEDULE_AND_RUNTIME.md`
 - Da verify o workspace local:
   - morning chain khong con crash
   - full chain scan -> crawl -> rewrite -> select -> queue build OK
@@ -33,8 +44,8 @@ Cap nhat trang thai bot production de ca 2 may cung nam duoc tien do.
 
 ## BLOCKED / RISKS
 
-- Logic production that hien van nam chu yeu o `projects/content-automation/`, chua nam trong `bot/`
-- Shortlink van con bug path `s/s/...`
+- Nhieu dependency scripts cua scheduler production van chua port het vao `bot/scripts/`
+- Scheduler bot repo chua duoc run end-to-end tu chinh repo nay
 - Facebook token van co rui ro het han / logout / permission drift
 - Co nguy co lech giua workspace local va repo goc neu cham migration
 
