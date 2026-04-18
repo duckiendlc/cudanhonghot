@@ -14,15 +14,21 @@
   - Facebook comment OK
 - Push len repo goc cac tai lieu de bat dau chuan hoa repo shared.
 
+### Da port them vao repo bot
+- `bot/config/content-agent.json`
+- `bot/scripts/rewrite_via_openai.py`
+- `bot/docs/PRODUCTION_ENTRYPOINTS.md`
+
 ### Chua xong
-- Chua port logic production tu `projects/content-automation/` vao `bot/`.
+- Chua port logic scheduler production tu `projects/content-automation/` vao `bot/`.
+- Chua port multi-source engine vao `bot/`.
 - Chua sua bug shortlink path `s/s/...`.
-- Chua chot entrypoint production ngay trong repo `bot/`.
+- Chua noi runner rewrite moi vao pipeline bot repo hien tai.
 
 ### Uu tien tiep theo
 1. Port scheduler production (`run_morning_chain`, `run_publish_queue_once`, healthcheck) vao `bot/`.
-2. Port rewrite config (`content-agent.json`) vao `bot/`.
-3. Port multi-source registry/router/scanner/crawler vao `bot/`.
+2. Port multi-source registry/router/scanner/crawler vao `bot/`.
+3. Noi rewrite runner moi vao pipeline bot repo.
 4. Sau moi cum port, test chay that tu repo `bot/`.
 
 ### Ghi chu cho may khac

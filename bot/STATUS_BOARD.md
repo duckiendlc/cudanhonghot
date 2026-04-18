@@ -10,17 +10,22 @@ Cap nhat trang thai bot production de ca 2 may cung nam duoc tien do.
 
 ### Ready next
 - Port cum scheduler production vao `bot/`
-- Port config rewrite agent vao `bot/`
 - Port source registry + multi-source crawl router vao `bot/`
 - Chot file entrypoint production cho bot repo
+- Noi runner rewrite moi vao pipeline bot repo
 
 ## DONE
 
 - Da xac nhan repo `projects/cudanhonghot` push/pull duoc tren GitHub
 - Da them `bot/MIGRATION_PLAN.md`
 - Da them `bot/COLLAB_WORKFLOW.md`
+- Da them `bot/STATUS_BOARD.md` va `bot/HANDOFF.md`
 - Da cap nhat `bot/README.md` cho shared workflow
 - Da ghi nhan trang thai bot vao `NOTES.md`
+- Da port cum rewrite config dau tien vao repo bot:
+  - `bot/config/content-agent.json`
+  - `bot/scripts/rewrite_via_openai.py`
+  - `bot/docs/PRODUCTION_ENTRYPOINTS.md`
 - Da verify o workspace local:
   - morning chain khong con crash
   - full chain scan -> crawl -> rewrite -> select -> queue build OK
